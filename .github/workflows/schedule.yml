@@ -23,6 +23,8 @@ jobs:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         DOG_GIST_ID: e85d2e5765110be1d8cfe57f2557a130
         MARKDOWN_FILE: README.md
+        DOG_WIDTH: 61
+        DOG_FILL_LEN: 98
       run: |
         mvn -B package --file pom.xml
         java -jar target/dog-box-1.0-SNAPSHOT.jar

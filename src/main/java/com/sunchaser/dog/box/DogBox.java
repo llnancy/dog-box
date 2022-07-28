@@ -47,6 +47,9 @@ public class DogBox {
         String markdownFile = System.getenv("MARKDOWN_FILE");
         String startTag = Optional.ofNullable(System.getenv("DOG_BOX_START_TAG")).orElse("<!-- dog-box start -->");
         String endTag = Optional.ofNullable(System.getenv("DOG_BOX_END_TAG")).orElse("<!-- dog-box end -->");
+        System.out.println(markdownFile);
+        System.out.println(startTag);
+        System.out.println(endTag);
         if (Objects.nonNull(markdownFile)) {
             String old = FileUtil.readUtf8String(markdownFile);
             int startIndex = old.indexOf(startTag) + startTag.length();
