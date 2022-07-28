@@ -1,5 +1,21 @@
+<table>
+<tr>
+<td>
+
+<!-- dog-box start -->
+#### <a href="https://gist.github.com/e85d2e5765110be1d8cfe57f2557a130" target="_blank">🐶 舔狗日记</a>
+```text
+昨天晚上也好冷，本来以为街上没人，结果刚刚偷电动车的时候被抓了，本来想反抗，但警察说了一句老实点别动，我立刻就放弃了抵抗，因为我记
+得你说过，你喜欢老实人。
+                                                                                            2022-07-27 星期三
+```
+<!-- dog-box end -->
+
+</td>
+</tr>
+</table>
+
 <p align="center">
-  <img src="assets/gist_preview.png" alt="预览图" />
   <h2 align="center">Dog diary Box</h2>
   <p align="center">将今天的《舔狗日记》更新到 Gist / profile README</p>
 </p>
