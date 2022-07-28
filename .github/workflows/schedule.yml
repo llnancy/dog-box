@@ -28,3 +28,9 @@ jobs:
       run: |
         mvn -B package --file pom.xml
         java -jar target/dog-box-1.0-SNAPSHOT.jar
+    - name: Commit and push
+      run: |-
+        git config --global user.email "admin@lilu.org.cn" && git config --global user.name "sunchaser-lilu"
+        git diff
+        git add README.md && git commit -m ":robot: Github Action schedule automatically" || exit 0
+        git pull --rebase && git push
