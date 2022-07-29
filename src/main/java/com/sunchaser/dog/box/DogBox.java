@@ -111,7 +111,7 @@ public class DogBox {
         String gistId = getenv(DOG_GIST_ID);
         String dogWidth = getenv(DOG_WIDTH);
         String dogFillLen = getenv(DOG_FILL_LEN);
-        LOGGER.info("ghToken: {}\ngistId: {}\ndogWidth: {}\ndogFillLen: {}", ghToken, gistId, dogWidth, dogFillLen);
+        LOGGER.info("ghToken: {}, gistId: {}, dogWidth: {}, dogFillLen: {}", ghToken, gistId, dogWidth, dogFillLen);
         GHGist gist = getGhGist(ghToken, gistId);
         String data = getDogContent();
         String format = getFormatContext(data, Integer.parseInt(dogWidth), Integer.parseInt(dogFillLen));
@@ -127,7 +127,7 @@ public class DogBox {
         String markdownFile = getenv(MARKDOWN_FILE);
         String startTag = getenv(DOG_BOX_START_TAG);
         String endTag = getenv(DOG_BOX_END_TAG);
-        LOGGER.info("markdownFile: {}\nstartTag: {}\nendTag: {}", markdownFile, startTag, endTag);
+        LOGGER.info("markdownFile: {}, startTag: {}, endTag: {}", markdownFile, startTag, endTag);
         if (Objects.nonNull(markdownFile)) {
             String old = FileUtil.readUtf8String(markdownFile);
             int startIndex = old.indexOf(startTag) + startTag.length();
