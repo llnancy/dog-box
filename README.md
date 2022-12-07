@@ -47,7 +47,7 @@
 
 3. 编辑 `.github/workflows/schedule.yml` 文件中的环境变量：
 
-    - **`DOG_GIST_ID`**: `ID` 是新建 `Gist` 的 `url` 后缀: `https://gist.github.com/sunchaser-lilu/`**`e85d2e5765110be1d8cfe57f2557a130`**
+    - **`DOG_GIST_ID`**: `ID` 是新建 `Gist` 的 `url` 后缀: `https://gist.github.com/llnancy/`**`e85d2e5765110be1d8cfe57f2557a130`**
 
     - **`MARKDOWN_FILE`**: 如果更新到某个`markdown`文件，填写`markdown`文件名（包含相对路径或者绝对路径）。
     
