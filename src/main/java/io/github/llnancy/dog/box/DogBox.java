@@ -1,4 +1,4 @@
-package com.sunchaser.dog.box;
+package io.github.llnancy.dog.box;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.text.CharPool;
@@ -23,7 +23,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static com.sunchaser.dog.box.DogBox.EnvEnum.*;
+import static io.github.llnancy.dog.box.EnvEnum.*;
 
 /**
  * dog-box
@@ -78,7 +78,7 @@ public class DogBox {
     }
 
     enum EnvEnum {
-        GH_TOKEN(StringUtils.EMPTY),
+        GITHUB_TOKEN(StringUtils.EMPTY),
 
         DOG_GIST_ID("e85d2e5765110be1d8cfe57f2557a130"),
 
@@ -107,12 +107,12 @@ public class DogBox {
     }
 
     public static void main(String[] args) throws Exception {
-        String ghToken = getenv(GH_TOKEN);
+        String githubToken = getenv(GITHUB_TOKEN);
         String gistId = getenv(DOG_GIST_ID);
         String dogWidth = getenv(DOG_WIDTH);
         String dogFillLen = getenv(DOG_FILL_LEN);
-        LOGGER.info("ghToken: {}, gistId: {}, dogWidth: {}, dogFillLen: {}", ghToken, gistId, dogWidth, dogFillLen);
-        GHGist gist = getGhGist(ghToken, gistId);
+        LOGGER.info("githubToken: {}, gistId: {}, dogWidth: {}, dogFillLen: {}", githubToken, gistId, dogWidth, dogFillLen);
+        GHGist gist = getGhGist(githubToken, gistId);
         String data = getDogContent();
         String format = getFormatContext(data, Integer.parseInt(dogWidth), Integer.parseInt(dogFillLen));
         writeToGist(gist, format);
@@ -157,9 +157,9 @@ public class DogBox {
         return StrUtil.format("{}\n\n{}", joiner, date);
     }
 
-    private static GHGist getGhGist(String ghToken, String gistId) throws IOException {
+    private static GHGist getGhGist(String githubToken, String gistId) throws IOException {
         return new GitHubBuilder()
-                .withOAuthToken(ghToken)
+                .withOAuthToken(githubToken)
                 .build()
                 .getGist(gistId);
     }
